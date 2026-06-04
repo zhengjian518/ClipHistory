@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(xcodebuild -version)",
+      "Bash(xcode-select -p)",
+      "Bash(xcodebuild -project ClipHistory.xcodeproj -scheme ClipHistory -configuration Debug -destination platform=macOS CODE_SIGN_IDENTITY=- CODE_SIGNING_REQUIRED=NO build)",
+      "Bash(open /Users/jian.zheng/Library/Developer/Xcode/DerivedData/ClipHistory-bdhypncuwahkaegztaimoisvckrl/Build/Products/Debug/ClipHistory.app)",
+      "Bash(osascript -e 'quit app \"ClipHistory\"')",
+      "Bash(/Users/jian.zheng/Library/Developer/Xcode/DerivedData/ClipHistory-bdhypncuwahkaegztaimoisvckrl/Build/Products/Debug/ClipHistory.app/Contents/MacOS/ClipHistory)",
+      "Bash(echo \"Launched PID $!\")",
+      "Read(//tmp/**)",
+      "Bash(break)"
+    ]
+  }
+}
