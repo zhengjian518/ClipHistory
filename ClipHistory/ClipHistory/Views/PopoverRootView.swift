@@ -1,3 +1,4 @@
+import AppKit
 import SwiftUI
 
 struct PopoverRootView: View {
@@ -90,6 +91,16 @@ struct PopoverRootView: View {
                 .font(.system(size: 11))
                 .foregroundStyle(.secondary)
             Spacer()
+            Button {
+                NSApp.terminate(nil)
+            } label: {
+                Image(systemName: "power")
+                    .font(.system(size: 13))
+                    .foregroundStyle(.secondary)
+            }
+            .buttonStyle(.plain)
+            .help("退出")
+
             Button {
                 withAnimation(.easeOut(duration: 0.2)) { showSettings = true }
             } label: {
